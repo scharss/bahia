@@ -1,6 +1,6 @@
 //aplicacción hecha en p5 js
 var link;
-//crea variables de links
+//crea variables links
 function setup() {
     createCanvas(windowWidth, windowHeight);
     link = createA("http://vagamundeando.co/bahia-malaga-un-paraiso-escondido-en-el-pacifico-colombiano/", "Un paraiso escondido");
@@ -46,7 +46,8 @@ function draw() {
     link4.position(520, 500);
     textSize(32);
     text("Bahía Malaga", (windowWidth / 2) - 100, 10, 300);
-    var xpos = random(0, 1000);
-    var ypos = random(0, 1000);
+    //posición aleatoria de las ballenas
+    var xpos = random(0, windowWidth);
+    var ypos = random(0, windowHeight);
     image(cachalote, xpos, ypos, 150, 120)
 }
