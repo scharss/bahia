@@ -1,0 +1,23 @@
+.laclasealinea {
+    text-align: center;
+}
+
+.otradiv {
+    text-align: center;
+    border: 5px solid red;
+}
+
+#img1 {
+    width: 500px;
+    height: 600px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+}
