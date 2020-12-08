@@ -1,5 +1,6 @@
+//aplicacción hecha en p5 js
 var link;
-
+//crea variables donde estarán las imagenes
 function setup() {
     createCanvas(windowWidth, windowHeight);
     link = createA("http://vagamundeando.co/bahia-malaga-un-paraiso-escondido-en-el-pacifico-colombiano/", "Un paraiso escondido");
@@ -7,7 +8,7 @@ function setup() {
     link3 = createA("https://www.reservaaguamarina.com/temporada-de-ballenas", "Temporada de ballenas");
     link4 = createA("http://www.bahiamalaga.org/", "Bienvenidos a Bahía Málaga");
 }
-
+//carga imagenes
 function preload() {
     img = loadImage('img/malaga.jpg');
     img1 = loadImage('img/amaca.jpg');
@@ -17,12 +18,12 @@ function preload() {
     robot = loadImage('img/robot.jpg');
     cachalote = loadImage('img/cachalote.png');
 }
-
+//pone la simagenes en el canvas
 function draw() {
 
 
     background(img);
-
+//función constructora
     function malagasphotos(imgmalaga, x, y, w, h) {
         this.imgmalaga = imgmalaga;
         this.x = x;
@@ -31,12 +32,12 @@ function draw() {
         this.h = h;
         this.draw = image(imgmalaga, x, y, w, h);
     }
-
+//nuevos objetos
     var amacas = new malagasphotos(img1, 200, 100, 200, 100);
     var canoas = new malagasphotos(img2, 500, 100, 200, 100);
     var ballenas = new malagasphotos(img3, 200, 400, 200, 100);
     var bahia = new malagasphotos(img4, 500, 400, 200, 100);
-
+//ubica los enlaces
     link.position(220, 200);
     link2.position(520, 200);
     link3.position(220, 500);
