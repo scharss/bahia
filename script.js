@@ -1,12 +1,13 @@
 //aplicacción hecha en p5 js
 var link;
-//crea variables donde estarán las imagenes
+//crea variables de links
 function setup() {
     createCanvas(windowWidth, windowHeight);
     link = createA("http://vagamundeando.co/bahia-malaga-un-paraiso-escondido-en-el-pacifico-colombiano/", "Un paraiso escondido");
     link2 = createA("http://www.kayakcolombia.net/planes-en-kayak/turismo-kayak-bahia-malaga/", "Planes en kayak");
     link3 = createA("https://www.reservaaguamarina.com/temporada-de-ballenas", "Temporada de ballenas");
     link4 = createA("http://www.bahiamalaga.org/", "Bienvenidos a Bahía Málaga");
+    background(img);
 }
 //carga imagenes
 function preload() {
@@ -22,8 +23,8 @@ function preload() {
 function draw() {
 
 
-    background(img);
-//función constructora
+
+    //función constructora
     function malagasphotos(imgmalaga, x, y, w, h) {
         this.imgmalaga = imgmalaga;
         this.x = x;
@@ -32,17 +33,20 @@ function draw() {
         this.h = h;
         this.draw = image(imgmalaga, x, y, w, h);
     }
-//nuevos objetos
+    //nuevos objetos
     var amacas = new malagasphotos(img1, 200, 100, 200, 100);
     var canoas = new malagasphotos(img2, 500, 100, 200, 100);
     var ballenas = new malagasphotos(img3, 200, 400, 200, 100);
     var bahia = new malagasphotos(img4, 500, 400, 200, 100);
-//ubica los enlaces
+    //ubica los enlaces
+
     link.position(220, 200);
     link2.position(520, 200);
     link3.position(220, 500);
     link4.position(520, 500);
     textSize(32);
     text("Bahía Malaga", (windowWidth / 2) - 100, 10, 300);
-    image(cachalote, mouseX, mouseY, 150, 120)
+    var xpos = random(0, 1000);
+    var ypos = random(0, 1000);
+    image(cachalote, xpos, ypos, 150, 120)
 }
